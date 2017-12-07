@@ -79,7 +79,6 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 .forgot:hover{
-
 	color: rgb(200,225,215);
 }
 .submit-button{
@@ -233,6 +232,19 @@ body {
 	font-size: 16px;
 	font-weight: 700;
 	margin-bottom: 5px;
+}
+.login-message{
+	color: #155724;
+	background-color: #d4edda;
+	border-radius: 2px;
+padding:15px 0;
+
+}
+.login-message a {
+	color: #155724;
+	font-weight: 600;
+	text-decoration: none;
+
 }
 
 
