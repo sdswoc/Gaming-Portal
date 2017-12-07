@@ -28,6 +28,11 @@ html {
 body {
 	font-family: montserrat, arial, verdana;
 }
+.login-image img{
+	border-radius: 50%;
+	width: 100px;
+	height: auto;
+}
 .navigate{
 	position: fixed;
 	width: 100vw;
@@ -129,7 +134,7 @@ body {
 	padding: 7.5px 15px;
 	border: 1px solid #ccc;
 	border-radius: 3px;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 	width: 100%;
 	box-sizing: border-box;
 	font-family: montserrat;
@@ -242,6 +247,31 @@ padding:15px 0;
 }
 .login-message a {
 	color: #155724;
+	font-weight: 600;
+	text-decoration: none;
+
+}
+.fogot-form {
+	
+	margin-bottom: 10px;
+		
+	padding: 15px 0;
+}
+.forgot-form a {
+	color: #555;
+	font-size: 16px;
+	text-decoration: none;
+
+}
+.signup-message{
+	color: #31708f;
+	background-color: #d9edff;
+	border-radius: 2px;
+padding:15px 0;
+
+}
+.signup-message a {
+	color: #31708f;
 	font-weight: 600;
 	text-decoration: none;
 

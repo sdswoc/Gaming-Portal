@@ -102,15 +102,7 @@
             
                 if ($flag1 === 1 && $flag2 === 1  && $flag3 ===1 && $flag4 === 1 && $flag5 === 1)
                 {
-                  $servername = $username = $passd = "";
-                  $servername = "localhost";
-                  $username = "root";
-                  $passd = "3646";
-                  $dbname = "gameportal";
-                  $conn = new mysqli($servername, $username , $passd , $dbname);
-                  if($conn->connect_error){
-                    die("Connection failed: " . $conn->connect_error);
-                  }
+                  include "db.php";
                   $sql = "SELECT email FROM userinfo";
                   $result = $conn->query($sql);
                   if ($result->num_rows > 0 )
@@ -149,9 +141,9 @@
         <div class="navigate">
             <a class=" nav-head" id="nav-hd" href="../index.html">WebSiteName</a> 
             <ul class="nav-ri" style="margin-left:-50px; ">
-                <form class="form-inline login-form" action="signup.php">
-                    <input type="text" placeholder="Email or Phone" class=" login-text transp" id="email">
-                    <input type="password" placeholder="password" class=" login-text transp" id="pwd">
+                <form class="form-inline login-form" action="login.php" method="POST">
+                    <input type="text" placeholder="Email or Phone" class=" login-text transp" name="email" id="email">
+                    <input type="password" placeholder="password" class=" login-text transp" id="pwd" name="pass">
                     <button  type="submit" class="submit-button transp">Login</button>
                     <br>
                     <div class="forgot">Forgotten Password ?</div>
