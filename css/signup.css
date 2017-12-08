@@ -15,16 +15,13 @@
   unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
 }
 /*basic reset*/
-* {margin: 0; padding: 0;}
+* {margin: 0; padding: 0;
+}
 
 html {
 	height: 100%;
-	/*Image only BG fallback*/
-	
-	/*background = gradient + image pattern combo*/
 	background: url("../photos/col.jpg");
 }
-
 body {
 	font-family: montserrat, arial, verdana;
 }
@@ -115,7 +112,11 @@ body {
 	padding: 20px 30px;
 	box-sizing: border-box;
 	width: 80%;
+<<<<<<< Updated upstream
 	margin: 0 10%;
+=======
+	margin: 0 10%;	
+>>>>>>> Stashed changes
 	/*stacking fieldsets above each other*/
 	position: relative;
 }
@@ -243,6 +244,7 @@ body {
 	font-weight: 600;
 	text-decoration: none;
 }
+
 .fogot-form {	
 	margin-bottom: 10px;		
 	padding: 15px 0;

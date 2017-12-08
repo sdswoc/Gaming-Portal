@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!empty($_SESSION["uid"]))
+{
+    header('location: /webpages/home.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en" >
     <head>
@@ -105,6 +112,11 @@
                 {
                   include "config.php";
                      $conn = new mysqli($servername, $username , $passd , $dbname);
+                  if($conn->connect_error){
+                    die("Connection failed: " . $conn->connect_error);
+                  }
+
+                  $conn = new mysqli($servername, $username , $passd , $dbname);
                   if($conn->connect_error){
                     die("Connection failed: " . $conn->connect_error);
                   }
