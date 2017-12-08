@@ -16,7 +16,8 @@
               $data = trim($data);
               $data = stripslashes($data);
                $data = htmlspecialchars($data);
-              return $data;}
+              return $data;
+            }
             
               if ($_SERVER["REQUEST_METHOD"] === "POST")
               {
@@ -57,7 +58,7 @@
                 }
               else{
                 $password2 = prepare($_POST["cpass"]);
-                if ($password != $password2)
+                if ($password !== $password2)
                 {
                   $pass2err = "<div class=\"error\">Confirm Password do not match Password</div>";
                 }
@@ -102,7 +103,12 @@
             
                 if ($flag1 === 1 && $flag2 === 1  && $flag3 ===1 && $flag4 === 1 && $flag5 === 1)
                 {
-                  include "db.php";
+                  include "config.php";
+                     $conn = new mysqli($servername, $username , $passd , $dbname);
+                  if($conn->connect_error){
+                    die("Connection failed: " . $conn->connect_error);
+                  }
+
                   $sql = "SELECT email FROM userinfo";
                   $result = $conn->query($sql);
                   if ($result->num_rows > 0 )

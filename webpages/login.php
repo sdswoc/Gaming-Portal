@@ -10,8 +10,7 @@
          <?php
             $email = $password = "";
             $emailerr = $passerr = "";
-            function prepare($data){
-            
+            function prepare($data){            
               $data = trim($data);
               $data = stripslashes($data);
                $data = htmlspecialchars($data);
@@ -22,10 +21,8 @@
                 {
                   $emailerr = "<div class=\"error\">  * Email is required! </div>";
                 }
-              else{
-            
-                $email = prepare($_POST["email"]);
-                    
+              else{            
+                $email = prepare($_POST["email"]);                    
                     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
               $emailerr = "<div class=\"error\"> Invalid email format </div>";
                     }
@@ -33,7 +30,12 @@
                         $emailerr="";
                         $password = prepare($_POST["pass"]);
                         $passHash = hash("sha256" , $password);
-                        include "db.php";
+                        include "config.php";
+                           $conn = new mysqli($servername, $username , $passd , $dbname);
+                        if($conn->connect_error){
+                               die("Connection failed: " . $conn->connect_error);
+                        }
+
                         $sql = "select * From userinfo where email='" . $email . "' and password='" . $passHash . "'";
                         $result = $conn->query($sql);
                          
@@ -48,18 +50,11 @@
                         }
                         else{
                             $passerr = "<div class=\"error\"> Wrong Email or Password ! </div>";
-
                         }
-                 
-
-
-                         }
+                    }
                 }
             }
-
-
-            ?>
-       
+            ?>       
         <div class="navigate">
             <a class=" nav-head" id="nav-hd" href="../index.html">WebSiteName</a> 
             <ul class="nav-ri" style="margin-left:-50px; ">
@@ -72,7 +67,6 @@
                 </form>
             </ul>
         </div>
-        <!-- multistep form -->
         <form id="msform" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">    
             <fieldset>
                 <h2 class="fs-title">Sign In</h2>
@@ -82,7 +76,6 @@
                 <input type="password" name="pass"  value="<?php echo $lname ?>"  placeholder="Password"  />
                 <?php echo $passerr ; ?>
                 <div class="forgot-form"><a href="#"> Forgot your Password?</a></div>
-
                 <input type="submit" name="submit" class="submit action-button" value="Sign In"  />
                 <div class="signup-message">Don't have an account? <a href="signup.php">Create Account </a></div>
             </fieldset>

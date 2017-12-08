@@ -42,7 +42,6 @@ body {
 	background: rgba(0,0,0,0);
 	z-index: 100;
 }
-
 #nav-hd{
 	color: white;
 	text-decoration: none;
@@ -94,17 +93,13 @@ body {
 	margin-top: 5px;
 	color: white;
 	width: 80px;
-
-
 }
-
 .login-text{
 	height: 34px;
 	font-size:16px;
 	margin-left:  5px;
 	margin-top: 5px;
 }
-
 /*form styles*/
 #msform {
 	width: 500px;
@@ -121,7 +116,6 @@ body {
 	box-sizing: border-box;
 	width: 80%;
 	margin: 0 10%;
-	
 	/*stacking fieldsets above each other*/
 	position: relative;
 }
@@ -242,40 +236,30 @@ body {
 	color: #155724;
 	background-color: #d4edda;
 	border-radius: 2px;
-padding:15px 0;
-
+	padding:15px 0;
 }
 .login-message a {
 	color: #155724;
 	font-weight: 600;
 	text-decoration: none;
-
 }
-.fogot-form {
-	
-	margin-bottom: 10px;
-		
+.fogot-form {	
+	margin-bottom: 10px;		
 	padding: 15px 0;
 }
 .forgot-form a {
 	color: #555;
 	font-size: 16px;
 	text-decoration: none;
-
 }
 .signup-message{
 	color: #31708f;
 	background-color: #d9edff;
 	border-radius: 2px;
-padding:15px 0;
-
+	padding:15px 0;
 }
 .signup-message a {
 	color: #31708f;
 	font-weight: 600;
 	text-decoration: none;
-
 }
-
-
-
