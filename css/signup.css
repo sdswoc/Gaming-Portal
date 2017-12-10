@@ -1,4 +1,3 @@
-/*custom font*/
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 @font-face {
   font-family: "Montserrat";
@@ -14,19 +13,22 @@
   src: local('Lora Italic'), local('Lora-Italic'), url(https://fonts.gstatic.com/s/lora/v12/HeAP0mHtiTx5JKQlc80wp_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
   unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
 }
-/*basic reset*/
-* {margin: 0; padding: 0;}
 
+* {
+	margin: 0; 
+	padding: 0;
+}
 html {
 	height: 100%;
-	/*Image only BG fallback*/
-	
-	/*background = gradient + image pattern combo*/
 	background: url("../photos/col.jpg");
 }
-
 body {
 	font-family: montserrat, arial, verdana;
+}
+.login-image img{
+	border-radius: 50%;
+	width: 100px;
+	height: auto;
 }
 .navigate{
 	position: fixed;
@@ -37,7 +39,6 @@ body {
 	background: rgba(0,0,0,0);
 	z-index: 100;
 }
-
 #nav-hd{
 	color: white;
 	text-decoration: none;
@@ -62,10 +63,9 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	color: white;
 }
-.transp:hover::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+.transp:hover::placeholder { 
     color: rgb(10,15,20);
-
-    opacity: 1; /* Firefox */
+    opacity: 1; 
 }
 .transp:hover{
 	background: white;
@@ -79,7 +79,6 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 .forgot:hover{
-
 	color: rgb(200,225,215);
 }
 .submit-button{
@@ -90,18 +89,13 @@ body {
 	margin-top: 5px;
 	color: white;
 	width: 80px;
-
-
 }
-
 .login-text{
 	height: 34px;
 	font-size:16px;
 	margin-left:  5px;
 	margin-top: 5px;
 }
-
-/*form styles*/
 #msform {
 	width: 500px;
 	margin: 100px auto;
@@ -117,27 +111,22 @@ body {
 	box-sizing: border-box;
 	width: 80%;
 	margin: 0 10%;
-	
-	/*stacking fieldsets above each other*/
 	position: relative;
 }
-/*Hide all except first fieldset*/
 #msform fieldset:not(:first-of-type) {
 	display: none;
 }
-/*inputs*/
 #msform input, #msform textarea {
 	padding: 7.5px 15px;
 	border: 1px solid #ccc;
 	border-radius: 3px;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 	width: 100%;
 	box-sizing: border-box;
 	font-family: montserrat;
 	color: #2C3E50;
 	font-size: 16px;
 }
-/*buttons*/
 #msform .action-button {
 	width: 100px;
 	background: #f28281;
@@ -152,7 +141,6 @@ body {
 #msform .action-button:hover, #msform .action-button:focus {
 	background: #d9534f;
 }
-/*headings*/
 .fs-title {
 	font-size: 20px;
 	text-transform: uppercase;
@@ -165,11 +153,9 @@ body {
 	color: #666;
 	margin-bottom: 20px;
 }
-/*progressbar*/
 #progressbar {
 	margin-bottom: 30px;
 	overflow: hidden;
-	/*CSS counters to number the steps*/
 	counter-reset: step;
 }
 #progressbar li {
@@ -193,7 +179,6 @@ body {
 	border-radius: 3px;
 	margin: 0 auto 5px auto;
 }
-/*progressbar connectors*/
 #progressbar li:after {
 	content: '';
 	width: 100%;
@@ -202,14 +187,11 @@ body {
 	position: absolute;
 	left: -50%;
 	top: 9px;
-	z-index: -1; /*put it behind the numbers*/
+	z-index: -1;
 }
 #progressbar li:first-child:after {
-	/*connector not needed before the first step*/
 	content: none; 
 }
-/*marking active/completed steps green*/
-/*The number of the step and the connector before it = green*/
 #progressbar li.active:before,  #progressbar li.active:after{
 	background: #d9534f;
 	color: white;
@@ -234,6 +216,34 @@ body {
 	font-weight: 700;
 	margin-bottom: 5px;
 }
-
-
-
+.login-message{
+	color: #155724;
+	background-color: #d4edda;
+	border-radius: 2px;
+	padding:15px 0;
+}
+.login-message a {
+	color: #155724;
+	font-weight: 600;
+	text-decoration: none;
+}
+.fogot-form {	
+	margin-bottom: 10px;		
+	padding: 15px 0;
+}
+.forgot-form a {
+	color: #555;
+	font-size: 16px;
+	text-decoration: none;
+}
+.signup-message{
+	color: #31708f;
+	background-color: #d9edff;
+	border-radius: 2px;
+	padding:15px 0;
+}
+.signup-message a {
+	color: #31708f;
+	font-weight: 600;
+	text-decoration: none;
+}
