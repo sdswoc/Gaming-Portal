@@ -1,5 +1,4 @@
 <?php
-$servername = $username = $passd = "";
                   $servername = "abc";
                   $username = "abc";
                   $passd = "xyz";

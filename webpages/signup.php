@@ -1,9 +1,7 @@
 <?php
 session_start();
-if (!empty($_SESSION["uid"]))
-{
-    header('location: /webpages/home.php');
-}
+if (isset($_SESSION["uid"]))
+    header('location:/webpages/home.php');
 ?>
 <!DOCTYPE html>
 <html lang="en" >
@@ -50,7 +48,7 @@ if (!empty($_SESSION["uid"]))
                 }
               else{
                 $password = prepare($_POST["pass"]);
-                if (strlen((string)$password)<6)
+                if (strlen($password)<6  && is_string($password))
                 {
                   $passerr = "<div class=\"error\"> Your password must be at least 6 characters long.</div>";
                 }
@@ -140,7 +138,7 @@ if (!empty($_SESSION["uid"]))
                   $sql = "INSERT INTO userinfo (email, fname, lname , gender , password)
             VALUES ('$email', '$fname', '$lname' ,  '$gender' , '$passHash')";
                   if ($conn->query($sql) === TRUE) {
-                $success = "<div class=\"login-message\">Account Successfully Created! <a href=\"login\.php\">Login</a> </div>";
+                $success = "<div class=\"login-message\">Account Successfully Created! <a href=\"login.php\">Login</a> </div>";
             }
                   else {
                 echo "Error: " . $sql . "<br>" . $conn->error;
@@ -207,5 +205,6 @@ if (!empty($_SESSION["uid"]))
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>  
         <script src="../js/signup.js"></script>
+        
     </body>
 </html>

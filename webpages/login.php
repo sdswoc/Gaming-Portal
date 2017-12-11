@@ -1,9 +1,8 @@
 <?php
 session_start();
-if (!empty($_SESSION["uid"]))
-{
-    header('location: /webpages/home.php');
-}
+if (isset($_SESSION["uid"]))
+   header('location:/webpages/home.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="en" >
@@ -52,6 +51,7 @@ if (!empty($_SESSION["uid"]))
                             $_SESSION["email"] = $user["email"];
                             $_SESSION["fname"] = $user["fname"];
                             $_SESSION["lname"] = $user["lname"];
+                            $conn->close();
                             header('Location: /webpages/home.php');
                         }
                         else{

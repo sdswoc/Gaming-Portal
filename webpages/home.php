@@ -13,8 +13,8 @@ session_start();
     	<?php
     		 echo "Welcome " . $_SESSION["fname"] . " " . $_SESSION["lname"] ;
     	 ?>
-    	 <a href="addgame.php"> Suggest a game</a>
-    	 <br>
-    	 <a href="logout.php">Logout</a>
+         <a href="addgame.php">Add a game</a>
+         <br>
+         <a href="logout.php">Logout</a>
     </body>
     </html>
