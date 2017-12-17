@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION["uid"]))
-    header('location:/webpages/home.php');
+    header('location:/public/includes/home.php');
 ?>
 <!DOCTYPE html>
 <html lang="en" >
@@ -9,12 +9,15 @@ if (isset($_SESSION["uid"]))
         <meta charset="UTF-8">
         <title>Signup</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-        <link rel="stylesheet" href="../css/signup.css">
+        <link rel="stylesheet" href="../static/css/signup.css">
+        <link rel="stylesheet" href="../static/css/reset.css">
+        <link rel="stylesheet" href="../static/css/footer.css">
+        
     </head>
     <body>
         <?php
             $email = $password = $password2 = $fname = $lname = $gender  ="";
-            $emailerr = $passerr = $pass2err = $fnameerr = $lnameerr  ="";
+            $emailerr = $passerr = $pass2err = $fnameerr = $lnameerr  = $success="";
             $flag1 = $flag2 = $flag3 = $flag4 =$flag5 = 0;  
             function prepare($data){
             
@@ -154,18 +157,7 @@ if (isset($_SESSION["uid"]))
                    
             
              ?>
-        <div class="navigate">
-            <a class=" nav-head" id="nav-hd" href="../index.html">WebSiteName</a> 
-            <ul class="nav-ri" style="margin-left:-50px; ">
-                <form class="form-inline login-form" action="login.php" method="POST">
-                    <input type="text" placeholder="Email or Phone" class=" login-text transp" name="email" id="email">
-                    <input type="password" placeholder="password" class=" login-text transp" id="pwd" name="pass">
-                    <button  type="submit" class="submit-button transp">Login</button>
-                    <br>
-                    <div class="forgot">Forgotten Password ?</div>
-                </form>
-            </ul>
-        </div>
+        <?php include "navbar.php" ?>
         <!-- multistep form -->
         <form id="msform" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <!-- progressbar -->
@@ -204,7 +196,7 @@ if (isset($_SESSION["uid"]))
         </form>
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>  
-        <script src="../js/signup.js"></script>
-        
+        <script src="../static/scripts/signup.js"></script>
+        <?php include "footer.php" ?>
     </body>
 </html>

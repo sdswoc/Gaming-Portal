@@ -1,16 +1,16 @@
 <?php
 session_start();
 if (isset($_SESSION["uid"]))
-   header('location:/webpages/home.php');
-
+   header('location:/public/includes/home.php');
 ?>
 <!DOCTYPE html>
 <html lang="en" >
     <head>
         <meta charset="UTF-8">
         <title>Sign In</title>
-        
-        <link rel="stylesheet" href="../css/signup.css">
+        <link rel="stylesheet" href="../static/css/reset.css">
+        <link rel="stylesheet" href="../static/css/signup.css">
+        <link rel="stylesheet" href="../static/css/footer.css">
     </head>
     <body>
          <?php
@@ -52,7 +52,7 @@ if (isset($_SESSION["uid"]))
                             $_SESSION["fname"] = $user["fname"];
                             $_SESSION["lname"] = $user["lname"];
                             $conn->close();
-                            header('Location: /webpages/home.php');
+                            header('Location: /public/includes/home.php');
                         }
                         else{
                             $passerr = "<div class=\"error\"> Wrong Email or Password ! </div>";
@@ -62,23 +62,12 @@ if (isset($_SESSION["uid"]))
 
                 }
             }
-            ?>       
-        <div class="navigate">
-            <a class=" nav-head" id="nav-hd" href="../index.html">WebSiteName</a> 
-            <ul class="nav-ri" style="margin-left:-50px; ">
-                <form class="form-inline login-form" action="login.php" method="POST">
-                    <input type="text" placeholder="Email or Phone" name="email" class=" login-text transp" id="email">
-                    <input type="password" placeholder="password" name="pass" class=" login-text transp" id="pwd">
-                    <button  type="submit" class="submit-button transp">Sign In</button>
-                    <br>
-                    <div class="forgot">Forgotten Password ?</div>
-                </form>
-            </ul>
-        </div>
+            ?>
+            <?php include "navbar.php" ?>
         <form id="msform" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">    
             <fieldset>
                 <h2 class="fs-title">Sign In</h2>
-                <div class="login-image"><img src="../photos/avtar.png"></div>
+                <div class="login-image"><img src="../static/images/avtar.png"></div>
                 <input type="text" name="email" value="<?php echo $email ?>"  placeholder="Email"  />
                 <?php echo $emailerr ; ?>
                 <input type="password" name="pass"  value="<?php echo $lname ?>"  placeholder="Password"  />
@@ -88,5 +77,6 @@ if (isset($_SESSION["uid"]))
                 <div class="signup-message">Don't have an account? <a href="signup.php">Create Account </a></div>
             </fieldset>
         </form>
+        <?php include "footer.php" ?>
     </body>
 </html>
