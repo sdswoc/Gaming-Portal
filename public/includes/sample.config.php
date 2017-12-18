@@ -1,6 +1,6 @@
 <?php
-                  $servername = "abc";
-                  $username = "abc";
-                  $passd = "xyz";
-                  $dbname = "gameportal";
- ?>
+$servername = "abc";
+$username = "abc";
+$passd = "xyz";
+$dbname = "gameportal";
+?>

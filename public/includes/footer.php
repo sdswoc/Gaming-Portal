@@ -1,4 +1,3 @@
-
 <div class="foot">
 	<div class="foot-cont">
 		<ul>

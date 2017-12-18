@@ -1,17 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 @font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("https://fonts.gstatic.com/s/montserrat/v12/IQHow_FEYlDC4Gzy_m8fcoWiMMZ7xLd792ULpGE4W_Y.woff2") format("woff2");
-  unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 700;
+	src: local("Montserrat Bold"), local("Montserrat-Bold"), url("https://fonts.gstatic.com/s/montserrat/v12/IQHow_FEYlDC4Gzy_m8fcoWiMMZ7xLd792ULpGE4W_Y.woff2") format("woff2");
+	unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 @font-face {
-  font-family: 'Lora';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Lora Italic'), local('Lora-Italic'), url(https://fonts.gstatic.com/s/lora/v12/HeAP0mHtiTx5JKQlc80wp_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+	font-family: 'Lora';
+	font-style: italic;
+	font-weight: 400;
+	src: local('Lora Italic'), local('Lora-Italic'), url(https://fonts.gstatic.com/s/lora/v12/HeAP0mHtiTx5JKQlc80wp_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+	unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
 }
 * {
 	margin: 0; 
@@ -185,9 +185,9 @@ body {
 	font-weight: 600;
 	text-decoration: none;
 }
- @media only screen and (min-width: 768px){
- 	#msform {
-	width: 500px;
-	margin: 40px auto 40px auto;
+@media only screen and (min-width: 768px){
+	#msform {
+		width: 500px;
+		margin: 40px auto 40px auto;
 	}
- }
+}

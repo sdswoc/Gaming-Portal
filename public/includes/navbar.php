@@ -1,6 +1,6 @@
 
-   <link rel="stylesheet" type="text/css" href="../static/css/navbar.css">
-   <div class="nav-container">  
+<link rel="stylesheet" type="text/css" href="../static/css/navbar.css">
+<div class="nav-container">  
    <div class="navbar">
       <div class="nav-left">
          <div class="logo">
@@ -19,24 +19,23 @@
                </div>
                <div class="forgot">Forgotten Password ?</div>
             </div>
-            <button  type="submit" class="submit-button transp">Login</button>
-            
+            <button type="submit" class="submit-button transp">Login</button>            
          </div>
       </form>
-            <div class="menu" onclick="menu();">
-               <div class="bar"></div>
-               <div class="bar"></div>
-               <div class="bar"></div>
-            </div>
-         </div>
-         <form class="mobile-form" action="login.php" method="POST">
-            <div class="menu-mobile" id="men">         
-               <input type="text" placeholder="Email or Phone" class=" login-textm transp" name="email" id="email">
-               <input type="password" placeholder="password" class=" login-textm transp" id="pwd" name="pass"> 
-               <div class="forgot">Forgotten Password ?</div>
-               <button  type="submit" class="submit-button transp">Login</button>            
-            </div>
-         </form>
+      <div class="menu" onclick="menu();">
+         <div class="bar"></div>
+         <div class="bar"></div>
+         <div class="bar"></div>
+      </div>
    </div>
-         <script type="text/javascript" src="../static/scripts/navbar.js">
-         </script>
+   <form class="mobile-form" action="login.php" method="POST">
+      <div class="menu-mobile" id="men">         
+         <input type="text" placeholder="Email or Phone" class=" login-textm transp" name="email" id="email">
+         <input type="password" placeholder="password" class=" login-textm transp" id="pwd" name="pass"> 
+         <div class="forgot">Forgotten Password ?</div>
+         <button  type="submit" class="submit-button transp">Login</button>            
+      </div>
+   </form>
+</div>
+<script type="text/javascript" src="../static/scripts/navbar.js">
+</script>

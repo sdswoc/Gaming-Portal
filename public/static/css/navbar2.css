@@ -1,10 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 @font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("https://fonts.gstatic.com/s/montserrat/v12/IQHow_FEYlDC4Gzy_m8fcoWiMMZ7xLd792ULpGE4W_Y.woff2") format("woff2");
-  unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 700;
+	src: local("Montserrat Bold"), local("Montserrat-Bold"), url("https://fonts.gstatic.com/s/montserrat/v12/IQHow_FEYlDC4Gzy_m8fcoWiMMZ7xLd792ULpGE4W_Y.woff2") format("woff2");
+	unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 .nav-menu{
 	display: none;
@@ -87,8 +87,8 @@
 	margin-top: 5px
 }
 .transp:hover::placeholder { 
-    color: rgb(10,15,20);
-    opacity: 1; 
+	color: rgb(10,15,20);
+	opacity: 1; 
 }
 .transp:hover{
 	background: white;
@@ -117,31 +117,31 @@
 	font-size: 1.2rem;
 }
 @media only screen and (min-width: 768px){
-   .menu{
-	display: none;
+	.menu{
+		display: none;
 
 	}
 	#men{
 		display: none !important;
 	}
 	.login-textc{
-	height: 40px;
-	font-size:16px;
-	width: calc(50vw - 42px);
-	box-sizing: border-box;
-	background: rgba(0,0,0,0);
-	border: none;
-	top: 0;
-	position: absolute;
-	padding: 0 5px;
-	color: white;
+		height: 40px;
+		font-size:16px;
+		width: calc(50vw - 42px);
+		box-sizing: border-box;
+		background: rgba(0,0,0,0);
+		border: none;
+		top: 0;
+		position: absolute;
+		padding: 0 5px;
+		color: white;
 	}
 	.login-textc::placeholder{
 		color: white;
 	}
 	.login-textc:hover::placeholder { 
-    	color: rgb(10,15,20);
-    	opacity: 1; 
+		color: rgb(10,15,20);
+		opacity: 1; 
 	}
 	.login-textc:hover{
 		background: white;
@@ -174,7 +174,7 @@
 		width: 34px;
 		height: 34px ;
 		background: url("../images/icon_search.png");
- 		background-size: contain;
+		background-size: contain;
 		background-repeat: no-repeat;
 		cursor: pointer;
 	}

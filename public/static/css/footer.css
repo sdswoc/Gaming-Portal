@@ -1,11 +1,11 @@
 .foot{
-		width: 99.5vw;
-		background: rgba(0,0,0,0);
-		padding: 10px 0;
-		display: flex;
-		justify-content: center;
+	width: 99.5vw;
+	background: rgba(0,0,0,0);
+	padding: 10px 0;
+	display: flex;
+	justify-content: center;
 
-	}
+}
 .foot-cont{
 	display: flex;
 	flex-direction: column;

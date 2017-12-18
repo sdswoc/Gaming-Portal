@@ -1,17 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 @font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("https://fonts.gstatic.com/s/montserrat/v12/IQHow_FEYlDC4Gzy_m8fcoWiMMZ7xLd792ULpGE4W_Y.woff2") format("woff2");
-  unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 700;
+	src: local("Montserrat Bold"), local("Montserrat-Bold"), url("https://fonts.gstatic.com/s/montserrat/v12/IQHow_FEYlDC4Gzy_m8fcoWiMMZ7xLd792ULpGE4W_Y.woff2") format("woff2");
+	unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 @font-face {
-  font-family: 'Lora';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Lora Italic'), local('Lora-Italic'), url(https://fonts.gstatic.com/s/lora/v12/HeAP0mHtiTx5JKQlc80wp_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+	font-family: 'Lora';
+	font-style: italic;
+	font-weight: 400;
+	src: local('Lora Italic'), local('Lora-Italic'), url(https://fonts.gstatic.com/s/lora/v12/HeAP0mHtiTx5JKQlc80wp_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+	unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
 }
 .nav-container{
 	background: rgba(15,20,14,.2);
@@ -105,8 +105,8 @@
 	margin-top: 5px
 }
 .transp:hover::placeholder { 
-    color: rgb(10,15,20);
-    opacity: 1; 
+	color: rgb(10,15,20);
+	opacity: 1; 
 }
 .transp:hover{
 	background: white;
@@ -134,15 +134,15 @@
 	font-size:16px;
 }
 @media only screen and (min-width: 768px){
-   .menu{
-	display: none;
+	.menu{
+		display: none;
 
 	}
 	.login-textc{
-	height: 34px;
-	font-size:16px;
-	width: 20vw;
-}
+		height: 34px;
+		font-size:16px;
+		width: 20vw;
+	}
 	.nav-menu{
 		display: flex;
 		flex-direction: row;
@@ -150,7 +150,7 @@
 		align-items: center;
 
 	}
-.nav-heading{
+	.nav-heading{
 		font-size: 2em;
 	}
 	#men{
