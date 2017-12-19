@@ -85,9 +85,9 @@
          <div class="game-filter gf4"></div>
          <div class="game-filter gf5"></div>
          <div class="game-overlay">
-            <div class="gc gc-left"><</div>
+            <div class="gc gc-left">&lt;</div>
             <?php include "includes/game-label.php" ?>
-            <div class="gc gc-right">></div>
+            <div class="gc gc-right">  &gt;</div>
          </div>
       </div>
       <a name="event" class="event-fix"></a>

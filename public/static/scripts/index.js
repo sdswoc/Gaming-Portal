@@ -149,25 +149,25 @@ $(".gc-right").click(function()
 		$(".gf"+$c).addClass("animate-appear");	
 	})
 });
-// setInterval(function()
-// {
-// 	$(".gf"+$c).removeClass("animate-left");
-// 	$(".gf"+$c).removeClass("animate-appear");
-// 	$(".gf"+$c).removeClass("game-hide");
-// 	$(".gf"+$c).addClass("animate-right");
-// 	$(".game-label:nth-of-type("+($c+1)+")").fadeOut();
-// 	$c = $c -1;
-// 	$(".game-label:nth-of-type("+($c+2)+")").promise().done(function()
-// 	{
-// 		if($c<1)
-// 			{ $c=5;}
-// 		$(".game-label:nth-of-type("+($c+1)+")").fadeIn();	
-// 		$(".gf"+$c).removeClass("game-hide");
-// 		$(".gf"+$c).removeClass("animate-left");
-// 		$(".gf"+$c).removeClass("animate-right");
-// 		$(".gf"+$c).addClass("animate-appear");	
-// 	})
-// } , 5000);
+setInterval(function()
+{
+	$(".gf"+$c).removeClass("animate-left");
+	$(".gf"+$c).removeClass("animate-appear");
+	$(".gf"+$c).removeClass("game-hide");
+	$(".gf"+$c).addClass("animate-right");
+	$(".game-label:nth-of-type("+($c+1)+")").fadeOut();
+	$c = $c -1;
+	$(".game-label:nth-of-type("+($c+2)+")").promise().done(function()
+	{
+		if($c<1)
+			{ $c=5;}
+		$(".game-label:nth-of-type("+($c+1)+")").fadeIn();	
+		$(".gf"+$c).removeClass("game-hide");
+		$(".gf"+$c).removeClass("animate-left");
+		$(".gf"+$c).removeClass("animate-right");
+		$(".gf"+$c).addClass("animate-appear");	
+	})
+} , 5000);
 $(".game-label").hover(function(){
 	$(".game-filter").css("filter" , "blur(5px)");
 } , function(){
