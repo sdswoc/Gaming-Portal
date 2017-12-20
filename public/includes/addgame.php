@@ -32,28 +32,23 @@ if (!isset($_SESSION["uid"]))
       if ($conn->connect_error){
         die("Connection failed " . $conn->connect_error );
     }
-    if($_SESSION["gameid"]===null){
+    if($_SESSION["gameArray"]["id"]===null){
 
         $sql = "insert into games(gamename, genre , skill , numplayer , description , uid) values ('$gamename' , '$genre' , '$skill' , '$numplayer' , '$describe' , '" . $_SESSION["uid"] . "')";
         if ($conn->query($sql)===TRUE){
 
             $gameid = $conn->insert_id;
-            $_SESSION["gameid"] = $gameid;
-            $_SESSION["flag1"] = 1 ;
-            $_SESSION["gname"] = $gamename;
-            $_SESSION["genre"] = $genre;
-            $_SESSION["numplayer"] = $numplayer;
-            $_SESSION["skills"] = $skills;
-            $_SESSION["describe"] = $describe;
-            
+            $_SESSION["gameArray"] = array("id"=>$gameid,"flag" => 1,"name"=>$gamename,"genre" => $genre, "num"=>$numplayer,"skills" => $skills , "describe" => $describe );
+            echo $_SESSION["gameArray"]["id"];
             $conn->close();
         }
         else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
     }
-    if ($_SESSION["flag1"] ===1){
-        $gameid = $_SESSION["gameid"];
+    if ($_SESSION["gameArray"]["flag"] ===1){
+        $gameid = $_SESSION["gameArray"]["id"];
+        echo $_SESSION["gameArray"]["id"];
         $file_dir = "../static/games/" . $gamename . $gameid . "/"  ;
         mkdir($file_dir);
         $err1 =$err2=$err3="";
@@ -85,13 +80,8 @@ if (!isset($_SESSION["uid"]))
             file_upload("file3", "3" , $gamename , $gameid , $err3);
         }
         if ($err1 ==="" && $err2 ==="" && $err3 ===""){
-            unset($_SESSION["flag1"]);
-            unset($_SESSION["gameid"]);
-            unset($_SESSION["gname"]);
-            unset($_SESSION["genre"]);
-            unset($_SESSION["numplayer"]);
-            unset($_SESSION["skills"]);
-            unset($_SESSION["describe"]);
+            unset($_SESSION["gameArray"]);
+
             header('location:/public/includes/home.php');
         }
     }
@@ -99,50 +89,50 @@ if (!isset($_SESSION["uid"]))
 ?>
 </head>
 <body>
-    <?php include "navbar2.php"?>
+    <?php include "navbar2.php" ?>
     <div class="container">
-    <form method="POST" enctype="multipart/form-data" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-    <div>Suggest A game</div>
-    <table id="l">
-    <tr>
-    <td><label>Name</label></td>
-    <td><input type="text" placeholder="Name of the Game" value="<?php echo $_SESSION['gname'];?>" name="gamename" class="game-input" required></td>
-    <?php echo $nameerr ?>
-</tr>
-<tr>
-    <td><label>Genre</label></td>
-    <td><input type="text" value="<?php echo $_SESSION['genre'] ?>" placeholder="Genre" name="genre"></td>
-</tr>
-<tr>
-    <td><label>Players</label></td>
-    <td><input type="text" name="players" value="<?php echo $_SESSION['numplayer']?>" placeholder="Number of players required"></td>
-</tr>				
-<tr>
-  <td><label>Skills Required</label></td>
-  <td><input type="text" value="<?php echo $_SESSION['skills']?>" name="skill" placeholder="Skills required to play the game"></td>
-</tr>   
-<tr>
-    <td>Got Pictures? Upload</td>
-    <td><input type="file"  name="file1"></td>
-    <td><?php echo $err1 ?></td>
-</tr>                   
-<tr>
-    <td></td>
-    <td><input type="file"  name="file2"></td>
-    <td><?php echo $err2 ?></td>
-</tr>
-<tr>
-    <td></td>
-    <td><input type="file"  name="file3"></td>
-    <td><?php echo $err3 ?></td>
+        <form method="POST" enctype="multipart/form-data" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+            <div>Suggest A game</div>
+            <table id="l">
+                <tr>
+                    <td><label>Name</label></td>
+                    <td><input type="text" placeholder="Name of the Game" value="<?php echo$_SESSION["gameArray"]["name"];?>" name="gamename" class="game-input" required></td>
+                    <?php echo $nameerr ?>
+                </tr>
+                <tr>
+                    <td><label>Genre</label></td>
+                    <td><input type="text" value="<?php echo$_SESSION["gameArray"]["genre"]?>" placeholder="Genre" name="genre"></td>
+                </tr>
+                <tr>
+                    <td><label>Players</label></td>
+                    <td><input type="text" name="players" value="<?php echo $_SESSION["gameArray"]["num"]?>" placeholder="Number of players required"></td>
+                </tr>				
+                <tr>
+                  <td><label>Skills Required</label></td>
+                  <td><input type="text" value="<?php echo $_SESSION["gameArray"]["skills"] ?>" name="skill" placeholder="Skills required to play the game"></td>
+              </tr>   
+              <tr>
+                <td>Got Pictures? Upload</td>
+                <td><input type="file"  name="file1"></td>
+                <td><?php echo $err1 ?></td>
+            </tr>                   
+            <tr>
+                <td></td>
+                <td><input type="file"  name="file2"></td>
+                <td><?php echo $err2 ?></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="file"  name="file3"></td>
+                <td><?php echo $err3 ?></td>
 
-</tr>
-</table>
-<textarea rows="5" cols="55" wrap="hard" name="describe" placeholder="Short Description:">         
-    <?php echo $_SESSION['describe']?>        
-</textarea>
-<input type="submit" class="submit-btn"  value="Suggest Game" name="submit">
-</form>
+            </tr>
+        </table>
+        <textarea rows="5" cols="55" wrap="hard" name="describe" placeholder="Short Description:">         
+            <?php $_SESSION["gameArray"]["describe"]?>        
+        </textarea>
+        <input type="submit" class="submit-btn"  value="Suggest Game" name="submit">
+    </form>
 </div>
 <?php include "footer.php" ?>
 </body>

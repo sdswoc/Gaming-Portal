@@ -108,7 +108,7 @@ if (isset($_SESSION["uid"]))
 
     if ($flag1 === 1 && $flag2 === 1  && $flag3 ===1 && $flag4 === 1 && $flag5 === 1)
     {
-      include "config.php";
+      require_once("config.php");
       $conn = new mysqli($servername, $username , $passd , $dbname);
       if($conn->connect_error){
         die("Connection failed: " . $conn->connect_error);

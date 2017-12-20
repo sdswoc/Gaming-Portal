@@ -37,7 +37,7 @@ if (isset($_SESSION["uid"]))
       $emailerr="";
       $password = prepare($_POST["pass"]);
       $passHash = hash("sha256" , $password);
-      include "config.php";
+      require_once("config.php");
       $conn = new mysqli($servername, $username , $passd , $dbname);
       if($conn->connect_error){
        die("Connection failed: " . $conn->connect_error);
