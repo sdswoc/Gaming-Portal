@@ -1,27 +1,30 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 @font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("https://fonts.gstatic.com/s/montserrat/v12/IQHow_FEYlDC4Gzy_m8fcoWiMMZ7xLd792ULpGE4W_Y.woff2") format("woff2");
-  unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 700;
+	src: local("Montserrat Bold"), local("Montserrat-Bold"), url("https://fonts.gstatic.com/s/montserrat/v12/IQHow_FEYlDC4Gzy_m8fcoWiMMZ7xLd792ULpGE4W_Y.woff2") format("woff2");
+	unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 @font-face {
-  font-family: 'Lora';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Lora Italic'), local('Lora-Italic'), url(https://fonts.gstatic.com/s/lora/v12/HeAP0mHtiTx5JKQlc80wp_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+	font-family: 'Lora';
+	font-style: italic;
+	font-weight: 400;
+	src: local('Lora Italic'), local('Lora-Italic'), url(https://fonts.gstatic.com/s/lora/v12/HeAP0mHtiTx5JKQlc80wp_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+	unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
 }
-
 * {
 	margin: 0; 
 	padding: 0;
 }
 html {
 	height: 100%;
-	background: url("../photos/col.jpg");
+	background: #0f0c29;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background-attachment: fixed;
 }
+
 body {
 	font-family: montserrat, arial, verdana;
 }
@@ -30,75 +33,10 @@ body {
 	width: 100px;
 	height: auto;
 }
-.navigate{
-	position: fixed;
-	width: 100vw;
-	top: 0;
-	left: 0;
-	padding: 10px 10px;
-	background: rgba(0,0,0,0);
-	z-index: 100;
-}
-#nav-hd{
-	color: white;
-	text-decoration: none;
-	margin-left: 0;
-	font-size: 24px; 
-	font-family: 'Montserrat', sans-serif;
-}
-#nav-hd:hover{
-	text-decoration: none;
-	color: white;
-}
-.nav-ri{
-	float: right;
-	margin-right: 25px;
-}
-.transp{
-	background: rgba(0,0,0,0);
-	border: white solid 1px;
-	border-color: white; 
-	border-radius: 2px;
-	padding-left: 5px;
-	font-family: 'Montserrat', sans-serif;
-	color: white;
-}
-.transp:hover::placeholder { 
-    color: rgb(10,15,20);
-    opacity: 1; 
-}
-.transp:hover{
-	background: white;
-	color: rgb(10,15,20);
-}
-.forgot{
-	display: inline-block;
-	margin-left: 270px;
-	margin-top: 5px;
-	color: white;
-	font-family: 'Montserrat', sans-serif;
-}
-.forgot:hover{
-	color: rgb(200,225,215);
-}
-.submit-button{
-	margin-right: 5px;
-	height: 34px;
-	font-size: 16px;
-	margin-left: 10px;
-	margin-top: 5px;
-	color: white;
-	width: 80px;
-}
-.login-text{
-	height: 34px;
-	font-size:16px;
-	margin-left:  5px;
-	margin-top: 5px;
-}
+
 #msform {
-	width: 500px;
-	margin: 100px auto;
+	width: 90vw;
+	margin: 10px auto 10px auto;
 	text-align: center;
 	position: relative;
 }
@@ -129,7 +67,7 @@ body {
 }
 #msform .action-button {
 	width: 100px;
-	background: #f28281;
+	background: #302B62;
 	font-weight: bold;
 	color: white;
 	border: 0 none;
@@ -139,7 +77,7 @@ body {
 	margin: 10px 5px;
 }
 #msform .action-button:hover, #msform .action-button:focus {
-	background: #d9534f;
+	background: #24243F;
 }
 .fs-title {
 	font-size: 20px;
@@ -193,7 +131,7 @@ body {
 	content: none; 
 }
 #progressbar li.active:before,  #progressbar li.active:after{
-	background: #d9534f;
+	background: #24243E;
 	color: white;
 }
 .gender .gen{
@@ -211,7 +149,7 @@ body {
 	padding: 7.5px 0 ;
 	width: 100%;
 	text-align: center;
-	color: #f44336;
+	color: #f64747;
 	font-size: 16px;
 	font-weight: 700;
 	margin-bottom: 5px;
@@ -246,4 +184,10 @@ body {
 	color: #31708f;
 	font-weight: 600;
 	text-decoration: none;
+}
+@media only screen and (min-width: 768px){
+	#msform {
+		width: 500px;
+		margin: 40px auto 40px auto;
+	}
 }
