@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="../static/css/navbar.css">
 <div class="nav-container">  
    <div class="navbar">
@@ -19,7 +19,9 @@
                </div>
                <div class="forgot">Forgotten Password ?</div>
             </div>
-            <button type="submit" class="submit-button transp">Login</button>            
+            <button type="submit" class="submit-button transp">
+               <i class="fa fa-sign-in" aria-hidden="true"></i>
+            Login</button>            
          </div>
       </form>
       <div class="menu" onclick="menu();">
