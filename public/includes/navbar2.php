@@ -14,12 +14,11 @@
             </form>
          </div>
          <div class="nav-cont">
-            <div><a href="#">Notifications</a></div>
+            <div><a href="addgame.php">Suggest a Game</a></div>
             <div><a href="#">Profile</a></div>
             <div><a href="logout.php">Logout</a></div>
          </div>        
       </div>
-      
       <div class="menu" onclick="menu();">
          <div class="bar"></div>
          <div class="bar"></div>

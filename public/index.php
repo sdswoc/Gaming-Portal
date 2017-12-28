@@ -7,6 +7,7 @@
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="static/css/reset.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="static/scripts/jquery-3.2.1.min.js"></script>
 <link rel="stylesheet" type="text/css" href="static/css/index.css">
 <link rel="stylesheet" type="text/css" href="static/css/footer.css">
@@ -30,7 +31,15 @@
                <a href="#event">Events</a>
             </div>
             <div class="nav-link nl4">
-               <a href="includes/signup.php">Sign up/Sign in</a>
+               <a href="includes/signup.php">
+                  <i class="fa fa-user-plus" aria-hidden="true"></i>
+                  Sign up
+               </a>
+            </div>
+            <div class="nav-link nl5">
+               <a href="includes/login.php">
+                  <i class="fa fa-sign-in" aria-hidden="true"></i>
+               </a>
             </div>
 
          </div>
@@ -106,7 +115,9 @@
       </div>
       <div class="join-us">
          <a name="join"></a>
-         <a href="includes/signup.php"><div class="join">Join Us !</div></a>
+         <a href="includes/signup.php"><div class="join">
+            <i class="fa fa-user-plus" aria-hidden="true"></i>
+         Join Us !</div></a>
       </div>
       <?php include "includes/footer.php" ?>
       <span id="media-check"></span>
