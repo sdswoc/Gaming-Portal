@@ -17,13 +17,12 @@ if (!isset($_SESSION["uid"]))
 	<link rel="stylesheet" href="../static/css/addgame.css">
 	<link rel="stylesheet" href="../static/css/footer.css">
 	<?php
-	if ($_SERVER["REQUEST_METHOD"]=== "POST")
-	{
+	if ($_SERVER["REQUEST_METHOD"]=== "POST"){
 		function prepare($data){
-
 			$data = trim($data);
 			$data = stripslashes($data);
 			$data = htmlspecialchars($data);
+			$data = str_replace("'", "&#039;", $data);
 			return $data;
 		}
 		$gamename = prepare($_POST["gamename"]);
@@ -37,7 +36,7 @@ if (!isset($_SESSION["uid"]))
 		$time = prepare($_POST["time"]);
 		$today = date("Y-m-d") ;
 		$ctime = date("H:i");
-		if ($numplayer>0 && $numplayer<999) {
+		if ($numplayer>0 && $numplayer<999){
 			$numerr = "";
 			if(($today < $date) || ($today == $date && $ctime < $time )){
 				$daterr="";
@@ -47,14 +46,12 @@ if (!isset($_SESSION["uid"]))
 					die("Connection failed " . $conn->connect_error );
 				}
 				$result = $conn->query("SELECT gameid, gamename FROM games where gameid = $gamid");
-				if ($result->num_rows === 1 )
-				{
+				if ($result->num_rows === 1 ){
 					$row = $result->fetch_assoc();
 					if (strtolower($gamename) === strtolower($row["gamename"])){
 						$sql = "insert into events(gamename, place, noplayer , required , description , userid ,  date , time, type) values ('$gamename' , '$place' , '$numplayer' , '$things' , '$describe' , '" . $_SESSION["uid"] . "' , '$date', '$time' , '$eventype')";
 						if ($conn->query($sql)===TRUE){
 							$conn->close();
-
 						}
 						else {
 							echo "Error: " . $sql . "<br>" . $conn->error;

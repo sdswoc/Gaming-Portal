@@ -21,7 +21,8 @@
             </div>
             <button type="submit" class="submit-button transp">
                <i class="fa fa-sign-in" aria-hidden="true"></i>
-            Login</button>            
+               Login
+            </button>            
          </div>
       </form>
       <div class="menu" onclick="menu();">
