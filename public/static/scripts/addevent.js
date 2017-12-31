@@ -5,18 +5,14 @@ var inputField2 = document.querySelector('.gamid');
 var dropdown = document.querySelector('.value-list');
 var dropdownArray = [].concat(document.querySelectorAll('li'));
 var dropdownItems = dropdownArray[0];
-dropdown.classList.add('open');
-inputField.focus(); // Demo purposes only
-
+dropdown.classList.add('closed');
 var valueArray = [];
 dropdownItems.forEach(function (item) {
   valueArray.push(item.textContent);
 });
-
 var closeDropdown = function closeDropdown() {
   dropdown.classList.remove('open');
 };
-
 inputField.addEventListener('input', function () {
   dropdown.classList.add('open');
   var inputValue = inputField.value.toLowerCase();
@@ -35,7 +31,6 @@ inputField.addEventListener('input', function () {
     }
   }
 });
-
 dropdownItems.forEach(function (item) {
   item.addEventListener('click', function (evt) {
     inputField.value = item.textContent;
@@ -45,7 +40,6 @@ dropdownItems.forEach(function (item) {
     });
   });
 });
-
 inputField.addEventListener('focus', function () {
   inputField.placeholder = 'Type to filter';
   dropdown.classList.add('open');
@@ -53,12 +47,10 @@ inputField.addEventListener('focus', function () {
     dropdown.classList.remove('closed');
   });
 });
-
 inputField.addEventListener('blur', function () {
-  inputField.placeholder = 'Select Place';
+  inputField.placeholder = 'Enter Game';
   dropdown.classList.remove('open');
 });
-
 document.addEventListener('click', function (evt) {
   var isDropdown = dropdown.contains(evt.target);
   var isInput = inputField.contains(evt.target);

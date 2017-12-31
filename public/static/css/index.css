@@ -14,7 +14,6 @@
 	src: local("Lora Italic"), local("Lora-Italic"), url("https://fonts.gstatic.com/s/lora/v12/_RSiB1sBuflZfa9fxV8cOg.woff2") format("woff2");
 	unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
 }
-
 body{
 	background: #0f0c29;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
@@ -51,7 +50,6 @@ body{
 	font-family: 'Montserrat', sans-serif;
 	padding: 5px 15px;
 	box-sizing: border-box;
-
 }
 .navbar-left{
 	display: flex;
@@ -59,10 +57,8 @@ body{
 	align-items: center;
 	flex-direction: row;
 }
-
 .logo{
 	height: 50px;
-
 }
 #logo-img{
 	height: 100%;
@@ -130,7 +126,6 @@ body{
 	justify-content: center;
 	height: 100vh;
 }
-
 .home{
 	display: flex;
 	flex-direction: column;
@@ -145,7 +140,6 @@ body{
 	display: flex;
 	flex-direction: column;
 	text-shadow: 1px -1px 5px #333;	 
-
 }
 .welcome-content{
 	text-align: center;
@@ -171,14 +165,11 @@ body{
 @keyframes ssleft {
 	0% {
 		margin-left: 0vw;
-
 	}
 	50%{
 		opacity: .7;
 	}
-
 	100% {
-
 		opacity: 0;
 		width: 0;
 	}
@@ -186,16 +177,13 @@ body{
 @keyframes ssright {
 	0% {
 		right: 0;
-
 	}
 	50%{
 		opacity: .7;
 	}
-
 	100% {
 		opacity: 0;
 		width: 0;
-
 	}
 }
 @keyframes appear {
@@ -209,7 +197,6 @@ body{
 		opacity: 1;
 	}
 }
-
 .game-filter{
 	position: absolute;
 	width: 99.5vw;
@@ -282,7 +269,6 @@ body{
 	background-color: #24243F;
 }
 .game-btn-2{
-
 	background: #F28281;
 	padding: 10px;
 	border-radius: 3px;
@@ -290,7 +276,6 @@ body{
 .game-btn-2:hover{
 	background: #eb3d3c;		
 }
-
 .event-fix{
 	float: left;
 	display: inline-block;
@@ -388,7 +373,7 @@ body{
 	background-position-x: 35%; 
 }
 .gf5{
-	background: url('../images/mafia.png');
+	background: url('../images/mafia.jpg');
 	background-position: center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;

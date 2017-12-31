@@ -8,8 +8,11 @@ if (isset($_SESSION["uid"]))
 <head>
   <meta charset="UTF-8">
   <title>Signup</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../static/images/favicon-32.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <script src="../static/scripts/jquery-3.2.1.min.js"></script>
+  <script src='../static/scripts/jquery.easing.min.js'></script>  
   <link rel="stylesheet" href="../static/css/signup.css">
   <link rel="stylesheet" href="../static/css/reset.css">
   <link rel="stylesheet" href="../static/css/footer.css">  
@@ -161,8 +164,6 @@ if (isset($_SESSION["uid"]))
       <input type="submit" name="submit" class="submit action-button" value="Submit"  />
     </fieldset>
   </form>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>  
   <script src="../static/scripts/signup.js"></script>
   <?php include "footer.php" ?>
 </body>

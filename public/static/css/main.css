@@ -15,13 +15,11 @@
 .login-form{
 	margin-top: 10px;
 }
-
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 	color: white;
 	opacity: 1; /* Firefox */
 }
-.navbar{
-	
+.navbar{	
 	background: rgba(0,0,0,0);
 }
 #nav-hd{
@@ -33,7 +31,6 @@
 #nav-hd:hover{
 	color: white;
 }
-
 .login-text{
 	height: 34px;
 	font-size:16px;
@@ -48,7 +45,6 @@
 	font-family: 'Montserrat', sans-serif;
 }
 .forgot:hover{
-
 	color: rgb(10,15,20);
 }
 .nav-div{
@@ -62,8 +58,6 @@
 	margin-top: 5px;
 	color: white;
 	width: 80px;
-
-
 }
 .nav-ul{
 	margin-right: 15px;	
@@ -79,7 +73,6 @@
 }
 .transp:hover::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 	color: rgb(10,15,20);
-
 	opacity: 1; /* Firefox */
 }
 .transp:hover{
@@ -130,7 +123,6 @@
 	font-size: 52px;
 	line-height: 27px;
 	margin-left: -15px;
-
 }
 .carousel-control .icon-next {
 	margin-top: -18px;
@@ -151,15 +143,11 @@
 	z-index: 10;
 	padding:15px 20px;
 	display: inline-block;
-
 	background-color: #7e9b9f;
 	border-color: #7e9b9f;
 	border-radius: 2px;
 	box-shadow: none;
 	color: #fff;
-
-
-
 }	
 .sign div:hover{
 	font-family: 'Montserrat', sans-serif;
@@ -189,7 +177,6 @@
 	font-family: 'Montserrat', sans-serif;
 	word-wrap: break-word;
 	text-transform: uppercase;
-
 }
 .img-cont{
 	font-family: Lora;
@@ -200,5 +187,4 @@
 	margin-left: 110px;
 	height: 200px;
 	width: 80%;
-
 }

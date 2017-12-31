@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <head>
    <title>Gaming Portal</title>
-   <link rel="shortcut icon" href="photos/ico.ico" type="image/x-icon">
+   <link rel="icon" type="image/png" sizes="32x32" href="./static/images/favicon-32.png">
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="static/css/reset.css">
@@ -16,7 +16,7 @@
       <div class="navbar">
          <div class="navbar-left">
             <div class="logo">
-               <img id="logo-img" src="photos/icon.png">
+               <img id="logo-img" src="static/images/gp.png">
             </div>
             <div class="nav-heading">Gaming Portal</div>
          </div>
@@ -41,7 +41,6 @@
                   <i class="fa fa-sign-in" aria-hidden="true"></i>
                </a>
             </div>
-
          </div>
          <div class="menu" onclick="menu();">
             <div class="bar"></div>
