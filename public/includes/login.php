@@ -9,6 +9,7 @@ if (isset($_SESSION["uid"]))
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sign In</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../static/images/favicon-32.png">
   <link rel="stylesheet" href="../static/css/reset.css">
   <link rel="stylesheet" href="../static/css/signup.css">
   <link rel="stylesheet" href="../static/css/footer.css">
@@ -52,15 +53,16 @@ if (isset($_SESSION["uid"]))
       $_SESSION["email"] = $user["email"];
       $_SESSION["fname"] = $user["fname"];
       $_SESSION["lname"] = $user["lname"];
+      $_SESSION["gender"] = $user["gender"];
       $conn->close();
-      header('Location: /public/includes/home.php');
+      header('Location: /public/includes/home.php?wq=center');
     }
     else{
       $passerr = "<div class=\"error\"> Wrong Email or Password ! </div>";
-    }
-  }
-}
-}
+    };
+  };
+};
+};
 ?>
 <?php include "navbar.php" ?>
 <form id="msform" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">    

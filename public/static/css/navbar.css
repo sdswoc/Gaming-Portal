@@ -20,12 +20,10 @@
 .nav-container:hover{
 	background: rgba(35,25,45,.9);
 }
-
 .nav-menu{
 	display: none;
 }
-.navbar{
-	
+.navbar{	
 	width: 98vw;
 	margin: 0;
 	display: flex;
@@ -43,11 +41,9 @@
 	align-items: center;
 	flex-direction: row;
 }
-
 .logo{
 	height: 50px;
 	align-self: left;
-
 }
 #logo-img{
 	height: 100%;
@@ -58,7 +54,6 @@
 	text-transform: uppercase;
 	margin-left: 5px;
 }
-
 .bar{
 	width: 30px;
 	height: 5px;
@@ -82,8 +77,7 @@
 .menu:hover {
 	border: rgb(225,226,223) solid 2px;
 }
-.menu-mobile{
-	
+.menu-mobile{	
 	display: none;
 	opacity: 0;
 	transition: opacity 1s;
@@ -92,8 +86,6 @@
 	margin-top: 10px;
 	justify-content: space-between;
 }
-
-
 .transp{
 	background: rgba(0,0,0,0);
 	border: white solid 1px;
@@ -137,7 +129,6 @@
 @media only screen and (min-width: 768px){
 	.menu{
 		display: none;
-
 	}
 	.login-textc{
 		height: 34px;
@@ -149,7 +140,6 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
-
 	}
 	.nav-heading{
 		font-size: 2em;
@@ -157,7 +147,6 @@
 	#men{
 		display: none !important;
 	}
-
 	.nav-form div input {
 		margin-top: 5px;
 	}

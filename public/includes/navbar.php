@@ -5,7 +5,7 @@
       <div class="nav-left">
          <div class="logo">
             <a href="../index.php">
-               <img id="logo-img" src="../static/images/avtar.png">
+               <img id="logo-img" src="../static/images/gp.png">
             </a>
          </div>
          <div class="nav-heading">Gaming Portal</div>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 19, 2017 at 07:42 PM
+-- Generation Time: Dec 31, 2017 at 02:59 PM
 -- Server version: 5.7.20-0ubuntu0.16.04.1
 -- PHP Version: 7.0.22-0ubuntu0.16.04.1
 
@@ -23,17 +23,40 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `events`
+--
+
+CREATE TABLE `events` (
+  `eventid` int(11) NOT NULL,
+  `gamename` varchar(64) NOT NULL,
+  `place` varchar(64) NOT NULL,
+  `noplayer` int(3) DEFAULT NULL,
+  `required` text,
+  `date` varchar(64) DEFAULT NULL,
+  `time` varchar(64) DEFAULT NULL,
+  `intrested` text,
+  `description` text,
+  `type` varchar(64) DEFAULT NULL,
+  `userid` int(11) DEFAULT NULL,
+  `gameid` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `games`
 --
 
 CREATE TABLE `games` (
   `gameid` int(11) NOT NULL,
   `gamename` varchar(64) DEFAULT NULL,
-  `genre` varchar(8) DEFAULT NULL,
+  `genre` varchar(64) DEFAULT NULL,
   `skill` varchar(64) DEFAULT NULL,
-  `numplayer` varchar(8) DEFAULT NULL,
+  `numplayer` varchar(64) DEFAULT NULL,
   `description` text,
-  `uid` int(11) NOT NULL
+  `uid` int(11) NOT NULL,
+  `imgurl` varchar(255) DEFAULT ' ',
+  `upvote` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -56,6 +79,12 @@ CREATE TABLE `userinfo` (
 --
 
 --
+-- Indexes for table `events`
+--
+ALTER TABLE `events`
+  ADD PRIMARY KEY (`eventid`);
+
+--
 -- Indexes for table `games`
 --
 ALTER TABLE `games`
@@ -74,15 +103,20 @@ ALTER TABLE `userinfo`
 --
 
 --
+-- AUTO_INCREMENT for table `events`
+--
+ALTER TABLE `events`
+  MODIFY `eventid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
 -- AUTO_INCREMENT for table `games`
 --
 ALTER TABLE `games`
-  MODIFY `gameid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
+  MODIFY `gameid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 --
 -- AUTO_INCREMENT for table `userinfo`
 --
 ALTER TABLE `userinfo`
-  MODIFY `userid` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `userid` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- Constraints for dumped tables
 --

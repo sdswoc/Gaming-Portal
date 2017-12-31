@@ -9,6 +9,7 @@ if (!isset($_SESSION["uid"]))
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Suggest Game</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/images/favicon-32.png">
     <link rel="stylesheet" type="text/css" href="../static/css/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../static/css/addgame.css">
@@ -33,7 +34,7 @@ if (!isset($_SESSION["uid"]))
         die("Connection failed " . $conn->connect_error );
     }
     if($_SESSION["gameArray"]["id"]===null){
-        $sql = "insert into games(gamename, genre , skill , numplayer , description , uid) values ('$gamename' , '$genre' , '$skill' , '$numplayer' , '$describe' , '" . $_SESSION["uid"] . "')";
+        $sql = "insert into games(gamename, genre , skill , numplayer, upvote, description , uid) values ('$gamename' , '$genre' , '$skills' , '$numplayer' , '&' , '$describe' , '" . $_SESSION["uid"] . "')";
         if ($conn->query($sql)===TRUE){
             $gameid = $conn->insert_id;
             $_SESSION["gameArray"] = array( "id"=>$gameid,"flag" => 1,"name"=> $gamename,"genre" => $genre, "num"=>$numplayer,"skills" => $skills);
@@ -89,9 +90,10 @@ if (!isset($_SESSION["uid"]))
     }
     if ($err1 ==="" && $err2 ==="" && $err3 ===""){
         unset($_SESSION["gameArray"]);
-        header('location:/public/includes/home.php');
+        header('location:home.php');
     }
 }
+$conn->close();
 }
 ?>
 </head>
@@ -102,7 +104,6 @@ if (!isset($_SESSION["uid"]))
             <div class="form-head">Suggest A game</div>
             <input type="text" placeholder="Name of the Game" value="<?php echo $_SESSION["gameArray"]["name"];?>" name="gamename" class="game-input" required> 
             <input type="text" value="<?php echo $_SESSION["gameArray"]["genre"]?>" placeholder="Genre" name="genre">
-
             <input type="text" name="players" value="<?php echo $_SESSION["gameArray"]["num"]?>" placeholder="Number of players required">
             <input type="text" value="<?php echo $_SESSION["gameArray"]["skills"] ?>" name="skill" placeholder="Skills required to play the game">             
             <div class="form-subhead">Got Pictures? Upload</div>
@@ -124,7 +125,7 @@ if (!isset($_SESSION["uid"]))
                 Upload An Image
             </label>
             <?php echo $err3 ?>            
-            <textarea rows="2" cols="55" wrap="hard" name="describe" placeholder="Give Details About Game"></textarea>
+            <textarea rows="4" cols="55" wrap="hard" name="describe" placeholder="Give Details About Game"></textarea>
             <input type="submit" class="submit-btn"  value="Suggest Game" name="submit">
         </form>
     </div>
